@@ -1,0 +1,11 @@
+{
+  "name": "p33rs-configurable",
+  "version": "1.0.0",
+  "homepage": "https://github.com/p33rs/configurable",
+  "authors": [
+    "p33rs <jon@peers.pw>"
+  ],
+  "description": "options array access",
+  "main": "Configurable.js",
+  "license": "GPL-3.0"
+}
