@@ -1,9 +1,16 @@
 /**
  * Makes an object configurable.
+ * @param {object} target The object to make configurable
+ * @param {string} methodName Use a name besides 'options' for access
  */
-function Configurable(target) {
+function Configurable(target, methodName) {
 
-    target.options = Configurable.prototype.options;
+    if (!methodName) {
+        methodName = 'options';
+    } else if (typeof methodName !== 'string') {
+        throw new TypeError('expected string name');
+    }
+    target[methodName] = Configurable.prototype.options;
     return target;
 
 }
